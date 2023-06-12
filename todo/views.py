@@ -30,7 +30,7 @@ def add_item(request):
 def edit_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     form = ItemForm(instance=item)
-    context = { 
+    context = {
         'form': form
     }
     return render(request, 'todo/edit_item.html')
